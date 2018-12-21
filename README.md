@@ -31,10 +31,17 @@ After the names of the locations had been found, the coordinates of each locatio
 To find the latitude,longitude coordinates of each location name, GoogleSheets tool ezGeocode was used. 
 ezGeocode was used to extract the coordinates of each location, and the name of the location and its coordinates were saved into a CSV file for visualization. 
 
+Palladio was used to create a map of the donator locations. The CSV file was modified to fit the palladio standards (coordinates in one column) and palladio map tool was used to create the map. 
+Summary statistics of item counts and precentages of donations from different locations were calculated and visualized using excel. 
+
 Analysis: 
 The analysis shows, that most of donator locations are in Finland. When finding the location data it was found that many donations come from established finnish families who collected art, so even if the items themselves are foreign in origin, they have been donated by Finnish people. 
-Some foreign donations exist from locations all around the world including Japan, USA and Benin. These were from artists and teams with some relationship with Finland. For example collection donated from Japan was from a team with an existing relationship with the Finnish artwold, and Benin donation is from an artist who had an exhibition in Finland. 
+Some foreign donations exist from locations all around the world including Japan, USA and Benin. These were from artists and teams with some relationship with Finland. For example collection donated from Japan was from a team with an existing relationship with the Finnish artworld, and Benin donation is from an artist who had an exhibition in Finland. 
 So it can be said that most of the donations to the museum come from people with an relationship to the museum, either through national heritage as is the case with Finnish donators, or through other links in the art world such as exhibitions in one of the museums. 
+
+When looking at the summary statistics of item counts by donator location, clear peaks in Helsinki and Paris can be seen. This is due to the largest collections being donated from these locations. So even though not many individual donators are from Paris, they have donated large collections which shows as a peak in the item counts. 
+In Finland similar situation can be seen from the smaller peaks in Sortavala and Kajaani. Even though there are only one donator from each of those locations, the collections were large enough to show a peak in the item counts. 
+
 
 Pipeline biases and problems: 
 As the donator location data was not available through the FNG API, it had to be searched for as described above. This data is not always accurate, as the details of less famous donators were more difficult to find. Some of the information had to be estimated using for example the last known work location of the donator, or the location of the donators spouse. These decisions which had to be made on how to estimate the location of the donator also introduces bias on the data, and some other researher might have done these decisions differently. 
