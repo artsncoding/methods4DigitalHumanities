@@ -5,8 +5,10 @@ Finnish National Gallery consist of three museums: Ateneum Art Museum, Museum of
 
 Project:
 
-Our visualizations represent the digitised material from the Finnish National Gallery. These visualisations give some inside of the structure of collections and how much material has been digitised by the Finnish National Gallery and .
+Our visualizations represent the digitised material from the Finnish National Gallery. These visualisations give some inside of the structure of collections and how much material has been digitised by the Finnish National Gallery.
 Our whole group project can be found here:
+
+The map visualization looks into where the donators of items and collections come from. The research question behind the visualization is "Where are the collections in the Finish Nationar Gallery donated from?". 
 
 
 Working with FNG API:
@@ -24,3 +26,16 @@ We have divided the objects into different acquisition types based on the way th
 Acquisition types are the following: “hankinta” (purchase), “lahjoitus” (donation), “talletus” (deposition), “testamentattu valtiolle” (devised to government by last will), “testamenttilahjoitus” (devised to the museum by last will), “unknown” and “valtion talletus” (deposited by government). These categories were based on the categorization used by Finnish National Gallery. These categories were found by searching Finnish National Gallery Kokoelmat page for each collection. Information provided on the page of each item contains information on how the item was acquired. If this information was not provided, it was marked as ‘unknown’. 
 
 Geographical information taken from Wikipedia and other internet resources, books and newspaper articles found by googling the name of the collections or donators. Location has been chosen by the place of death of the person named in the collection or last known place of residence or known workplace[3] (for example living artists who have donated their works to museum). If there is two people mentioned in the name of the collection, we have solely taken the first location we could find, assuming that especially couples have most likely lived together. If there two people who have donated to together but who have no other connection, then we have made them their own entries. If location is unknown, we have marked it as “unknown”.
+
+After the names of the locations had been found, the coordinates of each location were found. 
+To find the latitude,longitude coordinates of each location name, GoogleSheets tool ezGeocode was used. 
+ezGeocode was used to extract the coordinates of each location, and the name of the location and its coordinates were saved into a CSV file for visualization. 
+
+Analysis: 
+The analysis shows, that most of donator locations are in Finland. When finding the location data it was found that many donations come from established finnish families who collected art, so even if the items themselves are foreign in origin, they have been donated by Finnish people. 
+Some foreign donations exist from locations all around the world including Japan, USA and Benin. These were from artists and teams with some relationship with Finland. For example collection donated from Japan was from a team with an existing relationship with the Finnish artwold, and Benin donation is from an artist who had an exhibition in Finland. 
+So it can be said that most of the donations to the museum come from people with an relationship to the museum, either through national heritage as is the case with Finnish donators, or through other links in the art world such as exhibitions in one of the museums. 
+
+Pipeline biases and problems: 
+As the donator location data was not available through the FNG API, it had to be searched for as described above. This data is not always accurate, as the details of less famous donators were more difficult to find. Some of the information had to be estimated using for example the last known work location of the donator, or the location of the donators spouse. These decisions which had to be made on how to estimate the location of the donator also introduces bias on the data, and some other researher might have done these decisions differently. 
+However, expecially in the case of locations were numerous donators are from, the data gives a good estimation on the range of locations where the donations come from. 
